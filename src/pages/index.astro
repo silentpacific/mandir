@@ -1,17 +1,76 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import DonationCard from '../components/DonationCard.astro';
 ---
+<BaseLayout title="Belur Lokenath Mandir | Joy Baba Lokenath" description="Belur Lokenath Mandir, Howrah. Prayer, Anna-Daan, community service, donations, and temple information.">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Joy Baba Lokenath · জয় বাবা লোকনাথ</p>
+        <h1>Belur Lokenath Mandir</h1>
+        <p class="lead">A sacred temple and charitable trust in Belur, serving the community through devotion, daily Anna-Daan, health camps, and humanitarian service since 1969.</p>
+        <div class="actions">
+          <a class="button" href="/donations/">Support the Trust</a>
+          <a class="button secondary" href="/about-temple/">Learn About the Temple</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <h2>Where devotion becomes service.</h2>
+        <p>Prayer, food distribution, care, and compassion for the community.</p>
+      </div>
+    </div>
+  </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <section class="section">
+    <div class="container grid-3">
+      <div class="stat"><strong>1969</strong><span>Trust established</span></div>
+      <div class="stat"><strong>55+</strong><span>Years of service</span></div>
+      <div class="stat"><strong>200–250</strong><span>People served through daily Anna-Daan</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <p class="eyebrow">About the Mandir</p>
+        <h2>A devotional home for prayer and service.</h2>
+        <p>The Bally Adi Lokenath Mandir Satyasrayee Math Trust oversees the Belur Lokenath Temple in Howrah, West Bengal. The Trust combines spiritual practice with practical humanitarian work.</p>
+        <p>Its regular initiatives include food distribution, medical and eye-care support, blood donation camps, and assistance for underprivileged families.</p>
+      </div>
+      <div class="card">
+        <h3>Temple Timings</h3>
+        <p><strong>Morning Darshan:</strong> 6:00 AM – 1:00 PM</p>
+        <p><strong>Evening Darshan:</strong> 4:00 PM – 9:00 PM</p>
+        <p><strong>Daily Anna-Daan:</strong> 12:30 PM</p>
+        <a class="button secondary" href="/contact/">Plan Your Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <SectionHeading eyebrow="Seva" title="Daily Anna-Daan" text="A sacred act of food offering, carried out for people in need every day." />
+    <div class="container grid-3">
+      <div class="feature-card"><h3>Vegetarian Meals</h3><p>Nutritious meals are distributed with dignity and devotion.</p></div>
+      <div class="feature-card"><h3>Open to All</h3><p>Food is distributed without distinction of caste, creed, religion, or background.</p></div>
+      <div class="feature-card"><h3>Community Support</h3><p>Donations from devotees and well-wishers help sustain this service.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div class="quote">
+        <p>“I am in all creation. I do not see any existence other than Me in the world.”</p>
+        <p><strong>— Baba Lokenath</strong></p>
+      </div>
+      <div>
+        <p class="eyebrow">Baba Lokenath</p>
+        <h2>The eternal yogi and universal master.</h2>
+        <p>Mahayogi Shri Shri Baba Lokenath Brahmachari is revered by devotees as a realized spiritual master whose life emphasized devotion, discipline, compassion, and surrender.</p>
+        <a class="button secondary" href="/preachings/">Read Preachings</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section"><div class="container"><DonationCard /></div></section>
+</BaseLayout>

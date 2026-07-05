@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+<BaseLayout title="About Temple | Belur Lokenath Mandir">
+  <PageHero eyebrow="Our Mission" title="About Our Temple" subtitle="Serving humanity with divine grace since 1969." />
+  <section class="section">
+    <div class="container narrow">
+      <h2>Mission</h2>
+      <p class="lead">To uplift underprivileged people and spread peace, joy, devotion, and practical community care.</p>
+    </div>
+  </section>
+  <section class="section">
+    <SectionHeading eyebrow="Activities" title="Service beyond the temple walls" text="The Trust supports spiritual practice and social welfare through recurring initiatives." />
+    <div class="container grid-3">
+      <div class="feature-card"><h3>Food Distribution</h3><p>Meals for orphans, underprivileged people, and community members in need.</p></div>
+      <div class="feature-card"><h3>Education & Clothing</h3><p>Books, clothes, and essential supplies for families and children who need support.</p></div>
+      <div class="feature-card"><h3>Blood Donation Camps</h3><p>Community blood donation initiatives organized to support medical emergencies.</p></div>
+      <div class="feature-card"><h3>Eye Care Camp</h3><p>Eye-care support, medical consultation, and free spectacles for disadvantaged people.</p></div>
+      <div class="feature-card"><h3>Disaster Relief</h3><p>Relief work and essential goods during natural calamities and community hardship.</p></div>
+      <div class="feature-card"><h3>Future Projects</h3><p>Plans include a primary school and an old-age home to broaden long-term service.</p></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container grid-3">
+      <div class="stat"><strong>40</strong><span>Total members</span></div>
+      <div class="stat"><strong>12</strong><span>Permanent staff</span></div>
+      <div class="stat"><strong>16</strong><span>Temporary staff</span></div>
+    </div>
+  </section>
+  <section class="section">
+    <SectionHeading eyebrow="Temple Services" title="Prayer, guidance, and daily seva" />
+    <div class="container grid-2">
+      <div class="card"><h3>Daily Prayers</h3><p>Daily puja and prayer ceremonies are performed at the temple. Devotees are welcome to participate.</p><p><strong>11:00 AM & 7:30 PM</strong></p></div>
+      <div class="card"><h3>Spiritual Guidance</h3><p>Devotees may seek spiritual guidance, meditation support, and blessings by appointment.</p><p><strong>By appointment</strong></p></div>
+      <div class="card"><h3>Ayurveda Consultation</h3><p>Consultation about medicines, lifestyle changes, and treatment suggestions is available through temple enquiry.</p><p><strong>Enquire at temple</strong></p></div>
+      <div class="card"><h3>Anna-Daan</h3><p>Daily food service is provided after the 11:00 AM puja. Food is distributed equally to all.</p><p><strong>After 11:00 AM Puja</strong></p></div>
+    </div>
+  </section>
+</BaseLayout>

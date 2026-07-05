@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import TempleMap from '../components/TempleMap.astro';
+---
+
+<BaseLayout title="Contact Us | Belur Lokenath Mandir">
+
+  <PageHero
+    eyebrow="Contact"
+    title="Contact Belur Lokenath Mandir"
+    subtitle="We welcome devotees, visitors and well-wishers. Please feel free to reach out to us."
+  />
+
+  <section class="section">
+
+    <div class="container grid-2">
+
+      <form
+        class="form-card"
+        method="POST"
+        action="/api/contact"
+      >
+
+        <h2>Send us a Message</h2>
+
+        <label>
+          Full Name
+          <input
+            type="text"
+            name="name"
+            required
+          />
+        </label>
+
+        <label>
+          Email Address
+          <input
+            type="email"
+            name="email"
+            required
+          />
+        </label>
+
+        <label>
+          Phone Number
+          <input
+            type="tel"
+            name="phone"
+          />
+        </label>
+
+        <label>
+          Subject
+          <input
+            type="text"
+            name="subject"
+            required
+          />
+        </label>
+
+        <label>
+          Message
+          <textarea
+            name="message"
+            rows="6"
+            required
+          ></textarea>
+        </label>
+
+        <button
+          class="button"
+          type="submit">
+          Send Message
+        </button>
+
+        <p class="form-note">
+          We usually respond within 24–48 hours.
+        </p>
+
+      </form>
+
+      <div class="contact-card">
+
+        <h2>Temple Information</h2>
+
+        <p>
+          <strong>📍 Address</strong><br />
+          17/1, Ghoses Lane<br />
+          Belur, Bally<br />
+          Howrah – 711202<br />
+          West Bengal, India
+        </p>
+
+        <p>
+          <strong>📞 Phone</strong><br />
+          <a href="tel:+913326544674">
+            +91 (033) 2654 4674
+          </a>
+        </p>
+
+        <p>
+          <strong>✉️ Email</strong><br />
+          <a href="mailto:belurlokenathmandir@gmail.com">
+            belurlokenathmandir@gmail.com
+          </a>
+        </p>
+
+        <p>
+          <strong>🕉 Temple Timings</strong><br />
+          Morning: 6:00 AM – 1:00 PM<br />
+          Evening: 4:00 PM – 9:00 PM
+        </p>
+
+        <p>
+          <strong>🍛 Anna Daan</strong><br />
+          Every Day at 12:30 PM
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <div class="container">
+
+      <TempleMap />
+
+    </div>
+
+  </section>
+
+</BaseLayout>

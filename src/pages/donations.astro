@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import RazorpayDonate from '../components/RazorpayDonate.astro';
+---
+
+<BaseLayout title="Donations | Belur Lokenath Mandir">
+
+  <PageHero
+    eyebrow="Support the Temple"
+    title="Donate to Belur Lokenath Mandir"
+    subtitle="Every contribution, big or small, helps us continue the charitable and spiritual activities of the Trust."
+  />
+
+  <section class="section">
+    <div class="container grid-2">
+
+      <div>
+
+        <h2>Why Donate?</h2>
+
+        <p>
+          Belur Lokenath Mandir Trust has been serving the community for decades
+          through various humanitarian and spiritual initiatives inspired by
+          Sri Sri Baba Lokenath.
+        </p>
+
+        <p>
+          Your generous contribution enables us to continue these activities and
+          reach more people in need.
+        </p>
+
+        <ul class="donation-list">
+          <li>🍛 Daily Anna Daan (Food Distribution)</li>
+          <li>👕 Distribution of Clothes & Essentials</li>
+          <li>💊 Medicines for the Needy</li>
+          <li>🩸 Blood Donation Camps</li>
+          <li>👁️ Eye Check-up Camps</li>
+          <li>🙏 Temple Maintenance & Religious Activities</li>
+        </ul>
+
+        <p>
+          <strong>Joy Baba Lokenath.</strong>
+        </p>
+
+      </div>
+
+      <div class="donation-card">
+
+        <p class="eyebrow">
+          Secure Online Donation
+        </p>
+
+        <h2>
+          Support Our Mission
+        </h2>
+
+        <p>
+          Click the button below to make a secure online donation through
+          Razorpay. You may donate using UPI, Credit Card, Debit Card,
+          Net Banking or Wallets.
+        </p>
+
+        <RazorpayDonate />
+
+        <p class="small-text">
+          All online transactions are securely processed through Razorpay.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section-alt">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Your Donation Supports
+      </h2>
+
+      <div class="grid-2">
+
+        <div class="feature-card">
+          <h3>🍛 Anna Daan</h3>
+          <p>
+            Daily food distribution and special meal services for
+            underprivileged people.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>👕 Clothing Distribution</h3>
+          <p>
+            Clothes and essential supplies distributed throughout the year.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>💊 Medical Assistance</h3>
+          <p>
+            Medicines, healthcare support and assistance to people in need.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>🩸 Health Camps</h3>
+          <p>
+            Blood donation camps, eye-care camps and other community
+            welfare initiatives.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <div class="container narrow card">
+
+      <h2>Transparency</h2>
+
+      <p>
+        Every donation directly supports the charitable activities of
+        Belur Lokenath Mandir Trust. Your generosity helps us continue our
+        service to society while preserving the spiritual legacy of
+        Sri Sri Baba Lokenath.
+      </p>
+
+      <p>
+        We sincerely thank all devotees and well-wishers for their continued
+        support.
+      </p>
+
+      <h3>🙏 Joy Baba Lokenath 🙏</h3>
+
+    </div>
+
+  </section>
+
+</BaseLayout>

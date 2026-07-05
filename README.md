@@ -1,43 +1,31 @@
-# Astro Starter Kit: Minimal
+# Belur Lokenath Mandir — Astro Static Site
 
-```sh
-npm create astro@latest -- --template minimal
+Free static website built with Astro for deployment on Cloudflare Pages.
+
+## Local setup
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Build
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run build
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Cloudflare Pages settings:
+- Framework preset: Astro
+- Build command: `npm run build`
+- Output directory: `dist`
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Editing
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Common header: `src/components/Header.astro`
+- Common footer: `src/components/Footer.astro`
+- Shared styles: `src/styles/global.css`
+- Pages: `src/pages/*.astro`
+- Images: `public/images/`
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Replace placeholder image files/paths with real temple photos.

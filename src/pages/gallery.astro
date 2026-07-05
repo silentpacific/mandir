@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+<BaseLayout title="Gallery | Belur Lokenath Mandir">
+  <PageHero eyebrow="Gallery" title="Temple Gallery" subtitle="Replace these placeholders with real photographs from the temple, festivals, and seva activities." />
+  <section class="section">
+    <div class="container grid-3">
+      {Array.from({ length: 9 }).map((_, index) => (
+        <div class="card">
+          <img src="/images/temple-placeholder.svg" alt={`Temple gallery placeholder ${index + 1}`} />
+          <h3>Photo {index + 1}</h3>
+          <p>Add a short caption here.</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

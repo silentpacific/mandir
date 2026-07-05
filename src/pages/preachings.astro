@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+<BaseLayout title="Preachings | Belur Lokenath Mandir">
+  <PageHero eyebrow="Preachings" title="Messages and Discourses" subtitle="A collection of Maharaj Monubhai’s messages and spiritual reflections for devotees." />
+  <section class="section">
+    <div class="container grid-3">
+      <article class="card"><p class="eyebrow">Prayer</p><h2>General Prosperity Prayer</h2><p>Secrets of Maharaj Monu Baba.</p><a class="button secondary" href="#">Read More</a></article>
+      <article class="card"><p class="eyebrow">Spiritual Care</p><h2>Removing Negative Energy</h2><p>A discourse on spiritual protection, faith, and inner steadiness.</p><a class="button secondary" href="#">Read More</a></article>
+      <article class="card"><p class="eyebrow">Visit</p><h2>Address of Belur Lokenath Mandir</h2><p>Guidance for devotees looking for the temple location.</p><a class="button secondary" href="/contact/">Find the Temple</a></article>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container narrow quote">
+      <p>Use this page as a simple article index. Later, each preaching can become its own Astro or Markdown page.</p>
+    </div>
+  </section>
+</BaseLayout>

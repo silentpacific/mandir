@@ -1,0 +1,20 @@
+---
+const nav = [
+  { href: '/', label: 'Home', bn: 'হোম' },
+  { href: '/about-temple/', label: 'About Temple', bn: 'মন্দির সম্পর্কে' },
+  { href: '/donations/', label: 'Donations', bn: 'দান' },
+  { href: '/preachings/', label: 'Preachings', bn: 'বাণী প্রচার' },
+  { href: '/contact/', label: 'Contact', bn: 'যোগাযোগ' }
+];
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Belur Lokenath Mandir home">
+    <span class="brand-mark">ॐ</span>
+    <span><strong>Belur Lokenath Mandir</strong><small>বেলুড় লোকনাথ মন্দির</small></span>
+  </a>
+  <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Toggle navigation" />
+  <label class="menu-button" for="menu-toggle"><span></span><span></span><span></span></label>
+  <nav class="nav-links" aria-label="Primary navigation">
+    {nav.map((item) => <a href={item.href}>{item.label}<small>{item.bn}</small></a>)}
+  </nav>
+</header>
