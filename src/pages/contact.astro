@@ -16,72 +16,6 @@ import TempleMap from '../components/TempleMap.astro';
 
     <div class="container grid-2">
 
-      <form
-      id="contact-form"
-        class="form-card"
-        method="POST"
-        action="/api/contact"
-      >
-
-        <h2>Send us a Message</h2>
-
-        <label>
-          Full Name
-          <input
-            type="text"
-            name="name"
-            required
-          />
-        </label>
-
-        <label>
-          Email Address
-          <input
-            type="email"
-            name="email"
-            required
-          />
-        </label>
-
-        <label>
-          Phone Number
-          <input
-            type="tel"
-            name="phone"
-          />
-        </label>
-
-        <label>
-          Subject
-          <input
-            type="text"
-            name="subject"
-            required
-          />
-        </label>
-
-        <label>
-          Message
-          <textarea
-            name="message"
-            rows="6"
-            required
-          ></textarea>
-        </label>
-
-        <button
-          class="button"
-          type="submit">
-          Send Message
-        </button>
-
-        <p id="form-status"></p>
-
-        <p class="form-note">
-          We usually respond within 24–48 hours.
-        </p>
-
-      </form>
 
       <div class="contact-card">
 
@@ -136,39 +70,6 @@ import TempleMap from '../components/TempleMap.astro';
 
   </section>
 
-  <script>
-document.addEventListener("astro:page-load", () => {
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
 
-  if (!form || !status) return;
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    status.textContent = "Sending...";
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        status.textContent = "✅ Message sent successfully!";
-        form.reset();
-      } else {
-        status.textContent =
-          "❌ Something went wrong. Please try again.";
-      }
-    } catch (err) {
-      status.textContent =
-        "❌ Could not connect to the server.";
-    }
-  });
-});
-</script>
 
 </BaseLayout>
