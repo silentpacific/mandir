@@ -32,19 +32,33 @@ export async function onRequestPost(context) {
       `,
     });
 
-    return Response.redirect(
-      "https://belurlokenathmandir.com/contact?success=1",
-      303
-    );
+return new Response(
+  JSON.stringify({
+    success: true,
+  }),
+  {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+);
 
   } catch (err) {
 
     console.error(err);
 
-    return Response.redirect(
-      "https://belurlokenathmandir.com/contact?error=1",
-      303
-    );
+return new Response(
+  JSON.stringify({
+    success: false,
+  }),
+  {
+    status: 500,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+);
 
   }
 }

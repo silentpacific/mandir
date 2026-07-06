@@ -17,6 +17,7 @@ import TempleMap from '../components/TempleMap.astro';
     <div class="container grid-2">
 
       <form
+      id="contact-form"
         class="form-card"
         method="POST"
         action="/api/contact"
@@ -73,6 +74,8 @@ import TempleMap from '../components/TempleMap.astro';
           type="submit">
           Send Message
         </button>
+
+        <p id="form-status"></p>
 
         <p class="form-note">
           We usually respond within 24–48 hours.
@@ -132,5 +135,40 @@ import TempleMap from '../components/TempleMap.astro';
     </div>
 
   </section>
+
+  <script>
+document.addEventListener("astro:page-load", () => {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  if (!form || !status) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    status.textContent = "Sending...";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        status.textContent = "✅ Message sent successfully!";
+        form.reset();
+      } else {
+        status.textContent =
+          "❌ Something went wrong. Please try again.";
+      }
+    } catch (err) {
+      status.textContent =
+        "❌ Could not connect to the server.";
+    }
+  });
+});
+</script>
 
 </BaseLayout>
